@@ -1,0 +1,165 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4rem;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+form {
+  display: flex;
+  align-items: end;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+input {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.6em 1.2em;
+  margin: 1rem 0;
+  display: block;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--input-background-color);
+  color: var(--input-text-color);
+  transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
+    background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color-light);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--primary-color-dark);
+  transform: scale(1.05);
+}
+
+.toggle-theme {
+  margin-bottom: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--button-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.toggle-theme:hover {
+  background-color: var(--secondary-color-dark);
+  transform: scale(1.05);
+}
+
+.games {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.games > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--card-background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 18rem;
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
+    background-color 0.25s ease-in-out;
+}
+
+.games > div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.games img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.25s ease-in-out;
+}
+
+.games img:hover {
+  transform: scale(1.1);
+}
+
+.games h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: color 0.25s ease-in-out;
+}
+
+.games h2:hover {
+  color: var(--primary-color);
+}
+
+.games button {
+  background-color: #dc3545;
+  transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.games button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+
+:root {
+  --background-color: #f0f0f0;
+  --text-color: #333;
+  --input-background-color: #fff;
+  --input-text-color: #333;
+  --primary-color: #007bff;
+  --primary-color-light: rgba(0, 123, 255, 0.25);
+  --primary-color-dark: #0056b3;
+  --secondary-color: #6c757d;
+  --secondary-color-dark: #5a6268;
+  --button-text-color: #fff;
+  --card-background-color: #fff;
+}
+
+
+body.dark {
+  --background-color: #333;
+  --text-color: #f0f0f0;
+  --input-background-color: #444;
+  --input-text-color: #f0f0f0;
+  --primary-color: #80bdff;
+  --primary-color-light: rgba(128, 189, 255, 0.25);
+  --primary-color-dark: #5a9df5;
+  --secondary-color: #b2becd;
+  --secondary-color-dark: #929ba9;
+  --button-text-color: #333;
+  --card-background-color: #444;
+}
